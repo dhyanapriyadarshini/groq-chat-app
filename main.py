@@ -34,7 +34,7 @@ def initialize_client():
         
         # Use from_provider for simplified setup
         client = instructor.from_provider(
-            "groq/mixtral-8x7b-32768", 
+            "groq/llama-3.3-70b-versatile", 
             mode=instructor.Mode.TOOLS
         )
         return client
@@ -47,7 +47,7 @@ def chat_with_groq(client, user_message):
     """Send a message to Groq API and get a structured response"""
     try:
         resp = client.create(
-            model="mixtral-8x7b-32768",
+            model="llama-3.3-70b-versatile",
             messages=[
                 {
                     "role": "system",
